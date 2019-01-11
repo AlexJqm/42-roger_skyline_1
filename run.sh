@@ -52,3 +52,6 @@ sudo mv rules.v6 /etc/iptables/
 sudo service netfilter-persistent restart
 
 ###################### Fail2Ban ######################
+sudo mv /etc/fail2ban/jail.local /etc/fail2ban/jail.local.old
+sudo mv jail.local /etc/fail2ban/
+sudo service restart fail2ban
