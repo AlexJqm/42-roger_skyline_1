@@ -55,3 +55,19 @@ sudo service netfilter-persistent restart
 sudo mv /etc/fail2ban/jail.local /etc/fail2ban/jail.local.old
 sudo mv jail.local /etc/fail2ban/
 sudo service restart fail2ban
+
+###################### Website ######################
+sudo mv /var/www/html /var/www/html.old
+sudo mv html /var/www/
+
+###################### Finish ######################
+
+echo "[ \033[32mOK\033[0m ]\tNew user add to sudo group."
+echo "[ \033[32mOK\033[0m ]\tOS and packages udapte."
+echo "[ \033[32mOK\033[0m ]\tNetworking configuration and static IP."
+echo "[ \033[32mOK\033[0m ]\tSSH configuration."
+echo "[ \033[32mOK\033[0m ]\tScripts udapte and alert installed."
+echo "[ \033[32mOK\033[0m ]\tMail service configured."
+echo "[ \033[32mOK\033[0m ]\tIptables rules added."
+echo "[ \033[32mOK\033[0m ]\tFail2Ban configured."
+echo "[ \033[32mOK\033[0m ]\tWebsite upload."
