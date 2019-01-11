@@ -1,0 +1,6 @@
+Before start run.sh please install SUDO and GIT packages.
+
+  - apt-get install sudo
+  - apt-get install git
+  
+ Enjoy.
