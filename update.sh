@@ -1,2 +1,3 @@
 #! /bin/bash
-apt-get update && apt-get upgrade -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
