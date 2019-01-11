@@ -19,6 +19,7 @@ sudo apt-get install nano
 sudo apt-get install postfix
 sudo apt-get install mailutils
 sudo apt-get install fail2ban
+sudo apt-get install openssl
 echo "[ \033[32mOK\033[0m ]\tOS and packages udapte."
 sleep 3
 
@@ -77,6 +78,17 @@ sleep 3
 sudo mv /var/www/html /var/www/html.old
 sudo mv html /var/www/
 echo "[ \033[32mOK\033[0m ]\tWebsite upload."
+sleep 3
+
+###################### SSL ######################
+sudo mkdir -p /etc/ssl/localcerts
+sudo openssl req -new -x509 -days 365 -nodes -out /etc/ssl/localcerts/apache.pem -keyout /etc/ssl/localcerts/apache.key
+sudo chmod 600 /etc/ssl/localcerts/apache*
+sudo a2enmod ssl
+sudo service fail2ban restart
+sudo mv /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.old
+sudo mv default-ssl.conf /etc/apache2/sites-available/
+echo "[ \033[32mOK\033[0m ]\tSSL configured."
 sleep 3
 
 ###################### Finish ######################
