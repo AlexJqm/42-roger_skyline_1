@@ -68,7 +68,6 @@ echo "[ \033[32mOK\033[0m ]\tIptables rules added."
 sleep 3
 
 ###################### Fail2Ban ######################
-sudo mv /etc/fail2ban/jail.local /etc/fail2ban/jail.local.old
 sudo mv jail.local /etc/fail2ban/
 sudo service fail2ban restart
 echo "[ \033[32mOK\033[0m ]\tFail2Ban configured."
