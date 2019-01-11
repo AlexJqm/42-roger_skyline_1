@@ -2,9 +2,6 @@
 
 NAMENET=$(netstat -i | grep "enp*" | cut -f1 -d " ")
 
-###################### Install SUDO ######################
-apt-get install sudo
-
 ###################### Add User ######################
 read -p "Choose username for new user: " username
 sudo adduser $username
