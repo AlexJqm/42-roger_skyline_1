@@ -43,4 +43,7 @@ sudo mv aliases /etc/
 sudo newaliases
 sudo mv /etc/postfix/main.cf /etc/postfix/main.cf.old
 sudo mv main.cf /etc/postfix/
+sudo mv virtual /etc/postfix/
 sudo service postfix restart
+
+###################### Iptables ######################
