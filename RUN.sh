@@ -1,5 +1,8 @@
 #! /bin/bash
 
+echo "[ \033[32mOK\033[0m ]\tAutomatized start."
+sleep 2
+
 NAMENET=$(netstat -i | grep "enp*" | cut -f1 -d " ")
 
 ###################### Add User ######################
@@ -71,3 +74,5 @@ echo "[ \033[32mOK\033[0m ]\tMail service configured."
 echo "[ \033[32mOK\033[0m ]\tIptables rules added."
 echo "[ \033[32mOK\033[0m ]\tFail2Ban configured."
 echo "[ \033[32mOK\033[0m ]\tWebsite upload."
+
+sleep 2
