@@ -3,8 +3,6 @@
 echo "[ \033[32mOK\033[0m ]\tAutomatized start."
 sleep 2
 
-NAMENET=$(netstat -i | grep "enp*" | cut -f1 -d " ")
-
 ###################### Add User ######################
 read -p "Choose username for new user: " username
 sudo adduser $username
@@ -22,6 +20,7 @@ sudo apt-get install mailutils
 sudo apt-get install fail2ban
 
 ###################### Network ######################
+NAMENET=$(netstat -i | grep "enp*" | cut -f1 -d " ")
 sudo mv /etc/network/interfaces /etc/network/interfaces.old
 sudo mv interfaces /etc/network/
 sudo service networking restart
