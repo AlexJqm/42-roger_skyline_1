@@ -61,9 +61,9 @@ echo "[ \033[32mOK\033[0m ]\tMail service configured."
 sleep 3
 
 ###################### Iptables ######################
-#sudo mv rules.v4 /etc/iptables/
-#sudo mv rules.v6 /etc/iptables/
-#sudo service netfilter-persistent restart
+sudo mv rules.v4 /etc/iptables/
+sudo mv rules.v6 /etc/iptables/
+sudo service netfilter-persistent restart
 echo "[ \033[32mOK\033[0m ]\tIptables rules added."
 sleep 3
 
