@@ -47,3 +47,8 @@ sudo mv virtual /etc/postfix/
 sudo service postfix restart
 
 ###################### Iptables ######################
+sudo mv rules.v4 /etc/iptables/
+sudo mv rules.v6 /etc/iptables/
+sudo service netfilter-persistent restart
+
+###################### Fail2Ban ######################
