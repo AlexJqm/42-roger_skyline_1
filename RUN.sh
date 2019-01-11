@@ -85,10 +85,10 @@ sudo mkdir -p /etc/ssl/localcerts
 sudo openssl req -new -x509 -days 365 -nodes -out /etc/ssl/localcerts/apache.pem -keyout /etc/ssl/localcerts/apache.key
 sudo chmod 600 /etc/ssl/localcerts/apache*
 sudo a2enmod ssl
-sudo service fail2ban restart
 sudo mv /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf.old
 sudo mv default-ssl.conf /etc/apache2/sites-available/
 sudo mv website.conf /etc/apache2/sites-available/
+sudo service apache2 restart
 echo "[ \033[32mOK\033[0m ]\tSSL configured."
 sleep 3
 
