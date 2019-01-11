@@ -56,6 +56,7 @@ sudo newaliases
 sudo mv /etc/postfix/main.cf /etc/postfix/main.cf.old
 sudo mv main.cf /etc/postfix/
 sudo mv virtual /etc/postfix/
+sudo postmap /etc/postfix/virtual
 sudo service postfix restart
 echo "[ \033[32mOK\033[0m ]\tMail service configured."
 sleep 3
