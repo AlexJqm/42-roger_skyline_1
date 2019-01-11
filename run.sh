@@ -31,8 +31,9 @@ sudo mv sshd_config /etc/ssh/
 sudo service ssh restart
 
 ###################### Install scripts ######################
-sudo mkdir /var/scripts
-sudo mv alert.sh /var/scripts && mv udpate.sh /var/scritps
+sudo mkdir /var/scripts/
+sudo mv alert.sh /var/scripts/
+sudo mv udpate.sh /var/scritps/
 sudo mv /etc/crontab /etc/crontab.old
 sudo mv crontab /etc/
 
