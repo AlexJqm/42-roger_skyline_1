@@ -19,24 +19,27 @@ sudo apt-get install mailutils
 sudo apt-get install fail2ban
 
 ###################### Network ######################
-mv /etc/network/interfaces /etc/network/interfaces.old
-mv interfaces /etc/network/
+sudo mv /etc/network/interfaces /etc/network/interfaces.old
+sudo mv interfaces /etc/network/
 sudo service networking restart
-ifdown $NAMENET
-ifup $NAMENET
+sudo ifdown $NAMENET
+sudo ifup $NAMENET
 
 ###################### SSH ######################
-mv /etc/ssh/sshd_config /etc/ssh/sshd_config.old
-mv sshd_config /etc/ssh/
+sudo mv /etc/ssh/sshd_config /etc/ssh/sshd_config.old
+sudo mv sshd_config /etc/ssh/
 sudo service ssh restart
 
 ###################### Install scripts ######################
-mkdir /var/scripts
-mv alert.sh /var/scripts && mv udpate.sh /var/scritps
-mv /etc/crontab /etc/crontab.old
-mv crontab /etc/
+sudo mkdir /var/scripts
+sudo mv alert.sh /var/scripts && mv udpate.sh /var/scritps
+sudo mv /etc/crontab /etc/crontab.old
+sudo mv crontab /etc/
 
 ###################### Mail ######################
-mv /etc/aliases /etc/aliases.old
-mv aliases /etc/
+sudo mv /etc/aliases /etc/aliases.old
+sudo mv aliases /etc/
 sudo newaliases
+sudo mv /etc/postfix/main.cf /etc/postfix/main.cf.old
+sudo mv main.cf /etc/postfix/
+sudo service postfix restart
