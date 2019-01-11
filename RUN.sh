@@ -56,7 +56,7 @@ sudo service postfix restart
 ###################### Fail2Ban ######################
 sudo mv /etc/fail2ban/jail.local /etc/fail2ban/jail.local.old
 sudo mv jail.local /etc/fail2ban/
-sudo service restart fail2ban
+sudo service fail2ban restart
 
 ###################### Website ######################
 sudo mv /var/www/html /var/www/html.old
