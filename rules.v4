@@ -31,10 +31,10 @@ COMMIT
 -A INPUT -p tcp -m multiport --dports 80,443 -j f2b-apache-badbots
 -A INPUT -p tcp -m multiport --dports 25665 -j f2b-sshd-ddos
 -A INPUT -p tcp -m multiport --dports 25665 -j f2b-sshd
--A INPUT -p tcp -m tcp -m multiport ! --dports 80,443,25665,9418,20 -j DROP
 -A INPUT -m state --state RELATED,ESTABLISHED -m limit --limit 50/sec --limit-burst 50 -j ACCEPT
+-A INPUT -p tcp -m tcp -m multiport ! --dports 80,443,25665,20,9418,53 -j DROP
 -A INPUT -i lo -m limit --limit 10/min --limit-burst 50 -j ACCEPT
--A INPUT -p tcp -m multiport --dports 25665,9418,80,443,20 -m state --state NEW -m limit --limit 50/min --limit-burst 200 -j ACCEPT
+-A INPUT -p tcp -m multiport --dports 25665,80,443,20,9418,53 -m state --state NEW -m limit --limit 50/min --limit-burst 200 -j ACCEPT
 -A FORWARD -j ACCEPT
 -A OUTPUT -j ACCEPT
 -A f2b-HTTP -j RETURN
