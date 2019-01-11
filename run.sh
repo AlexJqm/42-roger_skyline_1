@@ -35,3 +35,8 @@ mkdir /var/scripts
 mv alert.sh /var/scripts && mv udpate.sh /var/scritps
 mv /etc/crontab /etc/crontab.old
 mv crontab /etc/
+
+###################### Mail ######################
+mv /etc/aliases /etc/aliases.old
+mv aliases /etc/
+sudo newaliases
