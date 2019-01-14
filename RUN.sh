@@ -45,7 +45,7 @@ sudo mv alert.sh /var/scripts/
 sudo mv update.sh /var/scripts/
 sudo mv /etc/crontab /etc/crontab.old
 sudo mv crontab /etc/
-sudo cp /etc/crontab/ /var/script/tmp
+sudo cp /etc/crontab /var/script/tmp
 echo "[ \033[32mOK\033[0m ]\tScripts udapte and alert installed."
 sleep 3
 
