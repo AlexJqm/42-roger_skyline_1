@@ -28,7 +28,6 @@ NAMENET=$(netstat -i | grep "enp*" | cut -f1 -d " ")
 sudo mv /etc/network/interfaces /etc/network/interfaces.old
 sudo mv interfaces /etc/network/
 sudo service networking restart
-sudo ifdown $NAMENET
 sudo ifup $NAMENET
 echo "[ \033[32mOK\033[0m ]\tNetworking configuration and static IP."
 sleep 3
